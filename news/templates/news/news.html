@@ -1,0 +1,15 @@
+<h2>Загруженные новости</h2>
+<br><br>
+<form action="">
+  <label for="with">Начиная с :</label>	
+  <input type="datetime-local" id="with" name="with" value="{{with}}">
+  <label for="with"> до:</label>	
+  <input type="datetime-local" id="to" name="to" value="{{to}}">
+  <br><br>
+  <input type="submit" value="Применить">
+</form>
+{% for n in news.all %}
+<p>
+	<a href="{{n.new_url}}">{{n.new_title}}</a>
+</p>
+{% endfor %}
